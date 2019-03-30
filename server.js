@@ -20,7 +20,7 @@ app.use('/static', express.static(path.join(__dirname, '/app/public')));
 // ROUTER
 // =============================================================
 
-// require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/apiRoutes.js")(app);
 require("./app/routing/htmlRoutes.js")(app);
 
 
