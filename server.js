@@ -14,12 +14,14 @@ app.use(express.json());
 
 //the path that you provide to the express.static function is relative to the directory from where you launch your node process. 
 //If you run the express app from another directory, it’s safer to use the absolute path of the directory that you want to serve:
-app.use('/static', express.static(path.join(__dirname, 'public')))
+
+app.use('/static', express.static(path.join(__dirname, '/app/public')));
 
 // ROUTER
 // =============================================================
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+
+// require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
 
 // LISTINER -- Starts the server to begin listening
