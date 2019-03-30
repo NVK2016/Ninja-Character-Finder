@@ -20,7 +20,9 @@ app.use('/static', express.static(path.join(__dirname, '/app/public')));
 // ROUTER
 // =============================================================
 
+// routing to API JSON DATA 
 require("./app/routing/apiRoutes.js")(app);
+// routing to  HTML PAGES 
 require("./app/routing/htmlRoutes.js")(app);
 
 
