@@ -15,63 +15,115 @@
 </head>
 
 <body>
-  <div class="jumbotron">
-    <h1 class="text-center"> Friend Finder App Survery </h1>
-    <div class="text-center">
-      <a href="/"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-home"></span>
-          Home</button></a>
-      <h6>Take a quick survey to find your perfect match! These questions are answered by the numbers 1 through 5. If
-        you really, really disagree with the statement, your answer would be 1. If you find a statement to hit extremely
-        close to home, put in a 5.</h6>
-    </div>
-  </div>
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-description">Enter your name, a picture, and how well the statements below describe you.
-            </h4>
-          </div>
-          <div class="panel-body">
-            <form role="form">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Name (Required)">
-              </div>
-              <div class="form-group">
-                <label for="picture">Picture</label>
-                <input type="text" class="form-control" id="picture" placeholder="Please include a picture of yourself">
-              </div>
+    <div class="jumbotron">
+      <h1 class="text-center"> <i class="fab fa-facebook-square"></i>Survey Questions</h1>
+      <hr />
+      <h6>Take a quick survey to find your perfect match! These questions are answered by the numbers 1 through 5. If
+        you really, really disagree with the statement, your answer would be 1. If you find a statement to hit
+        extremely
+        close to home, put in a 5.</h6>
+      <div class="text-center">
+        <a href="/"><button type="button" class="btn btn-lg btn-danger"><i class="fab fa-fort-awesome"></i>
+            Home</button></a>
 
-              <!-- Question 1 -->
-              <div class="form-group">
-                <label for="question-one">1. You tend to work alone.</label>
-                <select data-placeholder="" class="chosen-select" id="question-one">
-                  <option value=""></option>
-                  <option value="1">1 (Not like me)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Just like me)</option>
-                </select>
-              </div>
-              <button type="submit" class="btn btn-info submit">Submit</button>
-              <br /> 
-            </form>
-            <br /> 
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-description">Enter your name, a picture, and how well the statements below describe you.
+              </h4>
+            </div>
+            <div class="panel-body">
+              <form role="form">
+                <div class="form-group">
+                  <label for="name">Name (Required)</label>
+                  <input type="text" class="form-control" id="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <label for="picture">Picture Link (Required)</label>
+                  <input type="text" class="form-control" id="picture"
+                    placeholder="Please include a link to a picture of yourself">
+                </div>
+
+                <!-- Question 1 -->
+                <div class="form-group">
+                  <h5><strong>Question 1</strong></h5>
+                  <label for="question-1"> You tend to work alone.</label>
+                  <br/>
+                  <select data-placeholder="" class="chosen-select" id="question-1">
+                    <option value=""></option>
+                    <option value="1">1 (Not like me)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Just like me)</option>
+                  </select>
+                </div>
+                <!-- Question 2 -->
+                <div class="form-group">
+                    <h5><strong>Question 2</strong></h5>
+                    <label for="question-2"> You tend to work alone.</label>
+                    <select data-placeholder="" class="chosen-select" id="question-2">
+                      <option value=""></option>
+                      <option value="1">1 (Strongly Disagree)</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                  </div>
+                  <!-- Question 1 -->
+                <div class="form-group">
+                    <h5><strong>Question 3</strong></h5>
+                    <label for="question-3"> You tend to work alone.</label>
+                    <select data-placeholder="" class="chosen-select" id="question-3">
+                      <option value=""></option>
+                      <option value="1">1 (Strongly Disagree)</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                  </div>
+                <button type="submit" class="btn btn-info submit" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i> Submit </button>
+                <br />
+              </form>
+              <br />
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <footer>
+    <footer class="footer">
       <div class="container">
-          <a href="/api/friends">Discover Friends</a>
-          <span>|</span>
-          <a>Sample Data</a>
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/NVK2016/Friend-Finder">GitHub
+            Repo</a></p>
+      </div>
+    </footer>
+     <!-- Modal -->
+  <div id="results-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+  
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title"><strong>Best Match</strong></h2>
+          </div>
+          <div class="modal-body">
+            <h2 id="match-name"></h2>
+            <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
         </div>
-  </footer>
+  
+      </div>
+    </div>
 </body>
 
 </html>
