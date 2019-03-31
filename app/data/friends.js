@@ -2,27 +2,27 @@ var friendsArray = [
     {
         name: 'Leonardo',
         photo: "",
-        scores: [1, 3, 5, 3, 1, 1, 5, 4, 3, 2]
+        scores: [0,3,2]
     },
     {
         name: 'Raphael',
         photo: "",
-        scores: [1, 3, 5, 3, 1, 1, 5, 4, 3, 2]
+        scores: [1,4,5]
     },
     {
         name: 'Donatello', 
-        photo: "",
-        scores: [1, 3, 5, 3, 1, 1, 5, 4, 3, 2]
+        photo: "https://nypdecider.files.wordpress.com/2014/08/tmnt-2.png",
+        scores: [2,2,2]
     },
     {
         name: 'Michelangelo', 
         photo: "https://www.sideshow.com/collectibles/tmnt-michelangelo-prime-1-studio-902362", 
-        scores: [1, 3, 5, 3, 1, 1, 5, 4, 3, 2]
+        scores: [1, 3, 5]
     },
     {
         name: 'Splinter', 
         photo: "", 
-        scores: [1, 2, 3, 4, 5, 1, 5, 4, 3, 2]
+        scores: [1, 2, 3]
     }
 ];
 

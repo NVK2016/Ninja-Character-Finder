@@ -184,9 +184,10 @@
           name: $("#name").val(),
           photo: $("#photo").val(),
           scores: [
-            $("#question-1").val(),
-            $("#question-2").val(),
-            $("#question-3").val(),
+            //Converting into integers 
+          parseInt($("#question-1").val()),
+          parseInt($("#question-2").val()),
+          parseInt($("#question-3").val()),
           ]
         };
         
