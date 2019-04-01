@@ -190,7 +190,9 @@
           parseInt($("#question-3").val()),
           ]
         };
-        alert(userdata); 
+        
+        console.log("New friend Data : "+ userData); 
+        
         // AJAX post the data to the friends API.
         $.post("/api/friends", userData, function (data) {
           console.log("response" + data.name + data.length);

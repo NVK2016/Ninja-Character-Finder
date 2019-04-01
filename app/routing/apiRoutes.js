@@ -12,21 +12,24 @@ module.exports = function(app){
   // Below code handles when a user submits a form and thus submits data to the server.
   app.post('/api/friends', function(req, res){
 
+    //Data related 
     var newFriend = req.body;
-    var totalScore = 0; 
+    var newFriendScores = []; 
 
-    // parseInt for scores
+    //Convert the scores
     for(var i = 0; i < newFriend.scores.length; i++) {
-      totalScore += parseInt(newFriend.scores[i]);
+      newFriendScores.push(parseInt(newFriend.scores[i]));
     }
+    newFriend.scores = newFriendScores; 
 
-    var perfectMatch = matchFriend(newFriend , totalScore);
-    console.log(perfectMatch); 
+    console.log("New Friends" + newFriend); 
+    // var perfectMatch = matchFriend(newFriend , totalScore);
+    // console.log(perfectMatch); 
     //Adding the new friend to the list 
     friendList.push(newFriend); 
 
     //Sending the match back to the browser 
-    res.json(perfectMatch); 
+    res.json(newFriend); 
   })
 };
 
