@@ -21,9 +21,9 @@ module.exports = function(app){
       newFriendScores.push(parseInt(newFriend.scores[i]));
     }
     newFriend.scores = newFriendScores; 
-    console.log("New Friends" + newFriend); 
+    console.log("New Friend" + newFriend); 
     //Comparing Variables 
-    var perfectMatch = matchFriend(newFriend , newFriendScores);
+    var perfectMatch = matchNinjaCharacter(newFriend);
     console.log(perfectMatch); 
 
     //Adding the new friend to the list 
@@ -34,22 +34,31 @@ module.exports = function(app){
   })
 };
 
-function matchFriend(newFriend, totalScore){
+function matchNinjaCharacter(newFriend){
+  //Loop through all the TMNT Characters 
   for(var i =0; i < friendList.length; i++){
-    var totalDiff = 0, friendScore=0; 
+    var totalDiff = 0, charcterScore = 0,  friendScore =0; 
     
     for (let j = 0; j < friendList[i]["scores"].length; j++) {
-      friendScore += parseInt(friendList[i]["scores"][j]);
+      charcterScore += parseInt(friendList[i]["scores"][j]);
       
     }
-    // console.log("Old Frien total: "+ total); 
-    // console.log("New Frien total: "+ totalScore); 
+    
+    for(var idx = 0; i < newFriend.scores.length; idx++) {
+      friendScore += (parseInt(newFriend.scores[idx]));
+    }
+    console.log("TMNT total: "+ charcterScore); 
+    console.log("New Frien total: "+ friendScore); 
 
-    totalDiff += Math.abs(totalScore - friendScore); 
-    console.log("checkMatch: "+ totalDiff);
-
-    // if ( totalDiff === 0){ 
+    totalDiff = friendScore - charcterScore ; 
+    if (totalDiff < charcterScore ){ 
       console.log("Prefect match" + friendList[i].name); 
+    }
+    else { 
+        //default 
+        friendList[0];
+    }
+     
       //REturn the friend 
       return friendList[i]; 
     // }
