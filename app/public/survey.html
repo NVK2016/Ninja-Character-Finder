@@ -24,6 +24,9 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
    <!-- my CSS stylesheet -->
+   <link rel="stylesheet" type="text/css" media="screen" href="/app/public/assets/css/style.css" />
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 </head>
 
@@ -31,9 +34,9 @@
   <div class="container">
 
     <div class="jumbotron">
-      <h1 class="text-center"> <i class="fab fa-facebook-square"></i>Survey Questions</h1>
+      <h1 class="text-center"> <i class="fas fa-user-ninja"></i>Survey Questions</h1>
       <hr />
-      <h6>Take a quick survey to find your perfect match! These questions are answered by the numbers 1 through 5. If
+      <h6>Take a quick survey to find your ninja turtle match! These questions are answered by the numbers 1 through 5. If
         you really, really disagree with the statement, your answer would be 1. If you find a statement to hit
         extremely
         close to home, put in a 5.</h6>
@@ -67,44 +70,97 @@
               <!-- Question 1 -->
               <div class="form-group">
                 <h5><strong>Question 1</strong></h5>
-                <label for="question-1"> You tend to work alone.</label>
+                <label for="question-1">How would your friends describe you?</label>
                 <br />
                 <select data-placeholder="" class="chosen-select" id="question-1">
                   <option value=""></option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
+                  <option value="1">Focused</option>
+                  <option value="2">Honest</option>
+                  <option value="3">Strategic</option>
+                  <option value="4">Jokester</option>
+                  <option value="5">Wise</option>
                 </select>
               </div>
               <!-- Question 2 -->
               <div class="form-group">
                 <h5><strong>Question 2</strong></h5>
-                <label for="question-2"> You tend to work alone.</label>
+                <label for="question-2"> Pick a topping.</label>
+                <br />
                 <select data-placeholder="" class="chosen-select" id="question-2">
                   <option value=""></option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
+                  <option value="1">Cereal</option>
+                  <option value="2">Green Peppers</option>
+                  <option value="3">Mushrooms</option>
+                  <option value="4">Pizza</option>
+                  <option value="5">Soups</option>
                 </select>
               </div>
               <!-- Question 1 -->
               <div class="form-group">
                 <h5><strong>Question 3</strong></h5>
-                <label for="question-3"> You tend to work alone.</label>
+                <label for="question-3"> Whats your favorite color.</label>
+                <br />
                 <select data-placeholder="" class="chosen-select" id="question-3">
                   <option value=""></option>
-                  <option value="1">1 (Strongly Disagree)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Strongly Agree)</option>
+                  <option value="1">Blue</option>
+                  <option value="2">Red</option>
+                  <option value="3">Purple</option>
+                  <option value="4">Orange</option>
+                  <option value="5">Yellow</option>
                 </select>
               </div>
-
+              <div class="form-group">
+                  <h5><strong>Question 4</strong></h5>
+                  <label for="question-4"> Pick a hobby.</label>
+                  <br />
+                  <select data-placeholder="" class="chosen-select" id="question-4">
+                    <option value=""></option>
+                    <option value="1">Meditating</option>
+                    <option value="2">Hockey</option>
+                    <option value="3">Inventing</option>
+                    <option value="4">Video Games</option>
+                    <option value="5">Reading</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                    <h5><strong>Question 5</strong></h5>
+                    <label for="question-5"> What is your biggest weakness?</label>
+                    <br />
+                    <select data-placeholder="" class="chosen-select" id="question-5">
+                      <option value=""></option>
+                      <option value="1">Sometimes I get too focused on one thing</option>
+                      <option value="2">I can be impulsive and hot headed.</option>
+                      <option value="3">I can panic if things get too hectic</option>
+                      <option value="4">I can care too much about people think</option>
+                      <option value="5">None of the above</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                      <h5><strong>Question 6</strong></h5>
+                      <label for="question-6"> Pick a comic book sound</label>
+                      <br />
+                      <select data-placeholder="" class="chosen-select" id="question-6">
+                        <option value=""></option>
+                        <option value="1">BOOM!</option>
+                        <option value="2">POW!</option>
+                        <option value="3">WHAM!</option>
+                        <option value="4">ZAP!</option>
+                        <option value="5">WOW!</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                        <h5><strong>Question 7</strong></h5>
+                        <label for="question-7"> What’s your catchphrase?</label>
+                        <br />
+                        <select data-placeholder="" class="chosen-select" id="question-7">
+                          <option value=""></option>
+                          <option value="1">Totally tubular dude!</option>
+                          <option value="2">I Love Being A Turtle.</option>
+                          <option value="3">Gnarly!</option>
+                          <option value="4">Booyakasha</option>
+                          <option value="5">Cowabunga</option>
+                        </select>
+                      </div>
               <button type="submit" class="btn btn-info submit" id="submit"><i class="fa fa-check-circle"></i> Submit </button>
               <br />
 
@@ -127,7 +183,7 @@
 
   <!-- Modal -->
   <div id="results-modal" class="modal fade" role="dialog" tabindex="-1" >
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
   
         <!-- Modal content-->
         <div class="modal-content">
@@ -136,8 +192,9 @@
             <h2 class="modal-title"><strong>Best Match</strong></h2>
           </div>
           <div class="modal-body">
-            <h2 id="match-name"></h2>
+            You Got:<h2 id="match-name"></h2>
             <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+            <p id="match-desc"></p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -203,6 +260,10 @@
             parseInt($("#question-1").val()),
             parseInt($("#question-2").val()),
             parseInt($("#question-3").val()),
+            parseInt($("#question-4").val()),
+            parseInt($("#question-5").val()),
+            parseInt($("#question-6").val()),
+            parseInt($("#question-7").val()),
           ]
         };
 
@@ -215,12 +276,12 @@
 
           alert(" CLient Data : " + data);
           // to test the response from the server
-          alert(data.name);
+          alert(data.name + " | "+ data.photo);
           
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           $("#match-name").text(data.name);
           $("#match-img").attr("src", data.photo);
-          // $("#match-desc").text(data.desc);
+          $("#match-desc").text(data.desc);
 
           // Show the modal with the best match
           $("#results-modal").modal("toggle");

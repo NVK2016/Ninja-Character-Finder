@@ -21,15 +21,16 @@ module.exports = function(app){
       newFriendScores.push(parseInt(newFriend.scores[i]));
     }
     newFriend.scores = newFriendScores; 
-
     console.log("New Friends" + newFriend); 
-    // var perfectMatch = matchFriend(newFriend , totalScore);
-    // console.log(perfectMatch); 
+    //Comparing Variables 
+    var perfectMatch = matchFriend(newFriend , newFriendScores);
+    console.log(perfectMatch); 
+
     //Adding the new friend to the list 
     friendList.push(newFriend); 
 
     //Sending the match back to the browser 
-    res.json(newFriend); 
+    res.json(perfectMatch); 
   })
 };
 
