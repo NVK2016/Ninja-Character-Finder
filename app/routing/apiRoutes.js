@@ -12,15 +12,43 @@ module.exports = function(app){
   // Below code handles when a user submits a form and thus submits data to the server.
   app.post('/api/friends', function(req, res){
 
-    //Friend Details 
-    console.log(req.body.scores);
-    console.log(req.body.name);
-    console.log(req.body.photo);
+    var newFriend = req.body;
+    var totalScore = 0; 
 
+    // parseInt for scores
+    for(var i = 0; i < newFriend.scores.length; i++) {
+      totalScore += parseInt(newFriend.scores[i]);
+    }
+
+    var perfectMatch = matchFriend(newFriend , totalScore);
+    console.log(perfectMatch); 
     //Adding the new friend to the list 
-    friendList.push(req.body); 
+    friendList.push(newFriend); 
 
     //Sending the match back to the browser 
-    res.json(); 
+    res.json(perfectMatch); 
   })
 };
+
+function matchFriend(newFriend, totalScore){
+  for(var i =0; i < friendList.length; i++){
+    var totalDiff = 0, friendScore=0; 
+    
+    for (let j = 0; j < friendList[i]["scores"].length; j++) {
+      friendScore += parseInt(friendList[i]["scores"][j]);
+      
+    }
+    // console.log("Old Frien total: "+ total); 
+    // console.log("New Frien total: "+ totalScore); 
+
+    totalDiff += Math.abs(totalScore - friendScore); 
+    console.log("checkMatch: "+ totalDiff);
+
+    // if ( totalDiff === 0){ 
+      console.log("Prefect match" + friendList[i].name); 
+      //REturn the friend 
+      return friendList[i]; 
+    // }
+  }
+ 
+}

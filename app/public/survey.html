@@ -112,7 +112,7 @@
     </div>
   </footer>
   <!-- Modal -->
-  <div id="results-modal" class="modal fade" role="dialog">
+  <div id="results-modal" class="modal fade" role="dialog" tabindex="-1"aria-hidden="true">
     <div class="modal-dialog">
 
       <!-- Modal content-->
@@ -190,7 +190,7 @@
           parseInt($("#question-3").val()),
           ]
         };
-        
+        alert(userdata); 
         // AJAX post the data to the friends API.
         $.post("/api/friends", userData, function (data) {
           console.log("response" + data.name + data.length);
@@ -199,7 +199,7 @@
           $("#match-img").attr("src", data.photo);
 
           // Show the modal with the best match
-          $("#results-modal").modal("toggle");
+          $("#results-modal").modal("show");
 
         });
       } else {
