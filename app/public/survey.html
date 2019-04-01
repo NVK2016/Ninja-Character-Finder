@@ -5,12 +5,14 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Friend Finder App - Survey</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <!-- Jquery links -->
   <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
   <!-- Chosen -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
@@ -18,11 +20,16 @@
   <!-- Awesome FOnt Icons -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+   <!-- Bootstrap's  CSS and JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <!-- my CSS stylesheet -->
+
 </head>
 
 <body>
   <div class="container">
+
     <div class="jumbotron">
       <h1 class="text-center"> <i class="fab fa-facebook-square"></i>Survey Questions</h1>
       <hr />
@@ -36,13 +43,16 @@
 
       </div>
     </div>
+
     <div class="row">
       <div class="col-lg-12">
         <div class="panel panel-default">
+
           <div class="panel-heading">
             <h4 class="panel-description">Enter your name, a picture, and how well the statements below describe you.
             </h4>
           </div>
+
           <div class="panel-body">
             <form role="form">
               <div class="form-group">
@@ -54,7 +64,6 @@
                 <input type="text" class="form-control" id="photo"
                   placeholder="Please include a link to a picture of yourself">
               </div>
-
               <!-- Question 1 -->
               <div class="form-group">
                 <h5><strong>Question 1</strong></h5>
@@ -62,11 +71,11 @@
                 <br />
                 <select data-placeholder="" class="chosen-select" id="question-1">
                   <option value=""></option>
-                  <option value="1">1 (Not like me)</option>
+                  <option value="1">1 (Strongly Disagree)</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                   <option value="4">4</option>
-                  <option value="5">5 (Just like me)</option>
+                  <option value="5">5 (Strongly Agree)</option>
                 </select>
               </div>
               <!-- Question 2 -->
@@ -95,44 +104,50 @@
                   <option value="5">5 (Strongly Agree)</option>
                 </select>
               </div>
-              <button type="submit" class="btn btn-info submit" id="submit"><i class="fa fa-check-circle"
-                  aria-hidden="true"></i> Submit </button>
+
+              <button type="submit" class="btn btn-info submit" id="submit"><i class="fa fa-check-circle"></i> Submit </button>
               <br />
+
             </form>
             <br />
-          </div>
+          </div> <!-- End of Panel Body -->
         </div>
       </div>
     </div>
+
   </div>
+  <!-- End f container -->
+
   <footer class="footer">
     <div class="container">
       <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/NVK2016/Friend-Finder">GitHub
           Repo</a></p>
     </div>
   </footer>
+
   <!-- Modal -->
-  <div id="results-modal" class="modal fade" role="dialog" tabindex="-1"aria-hidden="true">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title"><strong>Best Match</strong></h2>
+  <div id="results-modal" class="modal fade" role="dialog" tabindex="-1" >
+      <div class="modal-dialog">
+  
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title"><strong>Best Match</strong></h2>
+          </div>
+          <div class="modal-body">
+            <h2 id="match-name"></h2>
+            <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
         </div>
-        <div class="modal-body">
-          <h2 id="match-name"></h2>
-          <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
+  
       </div>
-
-    </div>
   </div>
-
+  <!-- End of Modal Window -->
+  
   <script type="text/javascript">
     // Chosen CSS
     var config = {
@@ -176,39 +191,48 @@
         });
         return isValid;
       }
-
+      
       // If all required fields are filled
       if (validateForm()) {
         // Create an object for the user"s data
-        var userData = {
+        var newFriendData = {
           name: $("#name").val(),
           photo: $("#photo").val(),
           scores: [
             //Converting into integers 
-          parseInt($("#question-1").val()),
-          parseInt($("#question-2").val()),
-          parseInt($("#question-3").val()),
+            parseInt($("#question-1").val()),
+            parseInt($("#question-2").val()),
+            parseInt($("#question-3").val()),
           ]
         };
-        
-        console.log("New friend Data : "+ userData); 
-        
+
+        alert("New friend Data : " + newFriendData.scores);
+        // Grab the URL of the website
+        var currentURL = window.location.origin;
+
         // AJAX post the data to the friends API.
-        $.post("/api/friends", userData, function (data) {
-          console.log("response" + data.name + data.length);
+        $.post("/api/friends", newFriendData, function (data) {
+
+          alert(" CLient Data : " + data);
+          // to test the response from the server
+          alert(data.name);
+          
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           $("#match-name").text(data.name);
           $("#match-img").attr("src", data.photo);
+          // $("#match-desc").text(data.desc);
 
           // Show the modal with the best match
           $("#results-modal").modal("toggle");
 
         });
+        //END of AJAX 
       } else {
         alert("Please fill out all fields before submitting!");
       }
     });
   </script>
+
 </body>
 
 </html>

@@ -1,7 +1,6 @@
 # Friend-Finder
-Full stack survey based application using Node.js ,Express &amp; MySQL
+Full stack survey based application using Node.js &amp; Express.
 
 ##Pre-requisities : 
 
     npm install express
-    npm install mysql
