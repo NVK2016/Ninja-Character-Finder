@@ -1,7 +1,7 @@
 {
   "name": "Friend-Finder",
   "version": "1.0.0",
-  "description": "Full stack survey based application using Node.js ,Express &amp; MySQL",
+  "description": "Full stack survey based application using Node.js ,Express",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

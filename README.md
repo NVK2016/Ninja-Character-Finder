@@ -1,4 +1,4 @@
-# Friend-Finder
+# Ninja-Character-Finder
 Full stack survey based application using Node.js &amp; Express.
 
 ##Pre-requisities : 
@@ -6,5 +6,3 @@ Full stack survey based application using Node.js &amp; Express.
     npm install express
 
 ##deployed Link : 
-
-https://git.heroku.com/findyourninjacharacter.git
