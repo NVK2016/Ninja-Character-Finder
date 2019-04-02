@@ -5,16 +5,31 @@
    min-height: 100% !important;
 }
 
-#body {
-   font-family: 'Patua One', cursive;
+body {
+   font-family: 'Indie Flower', cursive;
    height: 100% !important;
    margin-bottom: 40px !important;
 }
 
-#footer {
-   position: absolute;
-   bottom: 10px;
-   height: 40px !important;
-   width: 100% !important;
+
+.jumbotron{
+   background-color: lightgreen; 
+   color: darkgreen; 
 }
 
+footer {
+   font-size: 22px; 
+   text-align: center; 
+}
+
+h5 {
+   color: green; 
+   font-size: 28px;
+}
+
+label {
+   font-size: 22px; 
+}
+.card{
+      
+}
