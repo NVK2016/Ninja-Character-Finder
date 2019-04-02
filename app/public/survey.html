@@ -163,7 +163,6 @@
                       </div>
               <button type="submit" class="btn btn-info submit" id="submit"><i class="fa fa-check-circle"></i> Submit </button>
               <br />
-
             </form>
             <br />
           </div> <!-- End of Panel Body -->
@@ -274,9 +273,8 @@
         // AJAX post the data to the ninja API.
         $.post("/api/ninjas", newFriendData, function (data) {
 
-          alert(" CLient Data : " + data);
           // to test the response from the server
-          alert(data.name + " | "+ data.photo + " | " + data.desc);
+          // alert(data.name + " | "+ data.photo + " | " + data.desc);
           
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           $("#match-name").text(data.name);
