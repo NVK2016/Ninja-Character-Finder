@@ -17,7 +17,7 @@ var friendsArray = [
     },
     {   //Score > 21 & <= 28 
         name: 'Michelangelo', 
-        photo: "/assets/images/michealangelo.gif",
+        photo: "/assets/images/michelangelo.gif",
         scores: [4,4,4,4,4,4,4]
     },
     {   //Score >28 

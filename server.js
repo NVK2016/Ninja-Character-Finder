@@ -16,7 +16,7 @@ app.use(express.json());
 //If you run the express app from another directory, it’s safer to use the absolute path of the directory that you want to serve:
 
 // app.use('/static', express.static(path.join(__dirname, '/app/public')));
-app.use(express.static('/app/public'));
+app.use(express.static('./app/public'));
 
 // ROUTER
 // =============================================================
