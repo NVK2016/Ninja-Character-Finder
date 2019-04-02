@@ -1,16 +1,16 @@
 //Load Data all from file 
-var friendList = require('../data/friends');
+var ninjaList = require('../data/ninja');
 
 module.exports = function (app) {
   //API GET Requests 
   //returns all the friends from the file in a JSON format 
-  app.get('/api/friends', function (req, res) {
-    res.json(friendList);
+  app.get('/api/ninjas', function (req, res) {
+    res.json(ninjaList);
   });
 
   // API POST Requests
   // Below code handles when a user submits a form and thus submits data to the server.
-  app.post('/api/friends', function (req, res) {
+  app.post('/api/ninjas', function (req, res) {
 
     //Data related 
     var newFriend = req.body;
@@ -37,7 +37,7 @@ module.exports = function (app) {
 function matchNinjaCharacter(newFriend) {
   //Loop through all the TMNT Characters 
 
-  console.log("TMNT" + friendList.length);
+  console.log("TMNT COUNT:" + ninjaList.length);
   var newFriendScore = newFriend.scores.reduce((total, num) => total + Number(num), 0);
   console.log(newFriendScore);
 
@@ -46,11 +46,11 @@ function matchNinjaCharacter(newFriend) {
   var closestMatchDiff;
 
   // loop over all ninja character array
-  friendList.forEach((element, index) => {
+  ninjaList.forEach((element, index) => {
     // get each friend score
-    const friendScore = element.scores.reduce((total, num) => total + Number(num), 0);
+    const ninjaScore = element.scores.reduce((total, num) => total + Number(num), 0);
     // find difference
-    const diff = Math.abs(friendScore - newFriendScore);
+    const diff = Math.abs(ninjaScore - newFriendScore);
     // if no match yet, this is the closest match
     if (!closestMatchDiff) {
       closestMatchDiff = diff;
@@ -62,9 +62,9 @@ function matchNinjaCharacter(newFriend) {
     }
   });
 
-  console.log(friendList[closestMatchIndex], closestMatchDiff)
+  console.log(ninjaList[closestMatchIndex], closestMatchDiff)
 
   //Return the Matched Character 
-  return friendList[closestMatchIndex];
+  return ninjaList[closestMatchIndex];
 
 }

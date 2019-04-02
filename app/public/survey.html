@@ -24,9 +24,9 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
    <!-- my CSS stylesheet -->
-   <link rel="stylesheet" type="text/css" media="screen" href="/app/public/assets/css/style.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css" />
    <!-- Google Fonts -->
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Patua+One" rel="stylesheet">
 
 </head>
 
@@ -176,14 +176,14 @@
 
   <footer class="footer">
     <div class="container">
-      <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/NVK2016/Friend-Finder">GitHub
+      <p><a href="/api/ninjas">API Ninja Character List</a> | <a href="https://github.com/NVK2016/Friend-Finder">GitHub
           Repo</a></p>
     </div>
   </footer>
 
   <!-- Modal -->
   <div id="results-modal" class="modal fade" role="dialog" tabindex="-1" >
-      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
   
         <!-- Modal content-->
         <div class="modal-content">
@@ -271,8 +271,8 @@
         // Grab the URL of the website
         var currentURL = window.location.origin;
 
-        // AJAX post the data to the friends API.
-        $.post("/api/friends", newFriendData, function (data) {
+        // AJAX post the data to the ninja API.
+        $.post("/api/ninjas", newFriendData, function (data) {
 
           alert(" CLient Data : " + data);
           // to test the response from the server

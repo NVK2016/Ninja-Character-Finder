@@ -1,4 +1,4 @@
-var friendsArray = [
+var ninjaArray = [
     {   //Score <= 7 
         name: 'Leonardo',
         photo: "/assets/images/Leonardo.gif",
@@ -27,4 +27,4 @@ var friendsArray = [
     }
 ];
 
-module.exports = friendsArray; 
+module.exports = ninjaArray; 
