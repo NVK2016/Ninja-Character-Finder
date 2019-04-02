@@ -47,12 +47,11 @@
     <div class="card">
       <div class="col-lg-12">
         <div class="panel panel-default">
-
+          <br/>
           <div class="panel-heading">
             <h4 class="panel-description">Enter your name, a picture, and how well the statements below describe you.
             </h4>
           </div>
-
           <div class="panel-body">
             <form role="form">
               <div class="form-group">
@@ -69,7 +68,7 @@
                 <h5><strong>Question 1</strong></h5>
                 <label for="question-1">How would your friends describe you?</label>
                 <br />
-                <select data-placeholder="" class="chosen-select" id="question-1">
+                <select data-placeholder="" class="chosen-select" id="question-1" onchange="update(15)">
                   <option value=""></option>
                   <option value="1">Focused</option>
                   <option value="2">Honest</option>
@@ -83,7 +82,7 @@
                 <h5><strong>Question 2</strong></h5>
                 <label for="question-2"> Pick a topping.</label>
                 <br />
-                <select data-placeholder="" class="chosen-select" id="question-2">
+                <select data-placeholder="" class="chosen-select" id="question-2" onchange="update(30)">
                   <option value=""></option>
                   <option value="1">Cereal</option>
                   <option value="2">Green Peppers</option>
@@ -97,7 +96,7 @@
                 <h5><strong>Question 3</strong></h5>
                 <label for="question-3"> Whats your favorite color.</label>
                 <br />
-                <select data-placeholder="" class="chosen-select" id="question-3">
+                <select data-placeholder="" class="chosen-select" id="question-3" onchange="update(45)">
                   <option value=""></option>
                   <option value="1">Blue</option>
                   <option value="2">Red</option>
@@ -111,7 +110,7 @@
                   <h5><strong>Question 4</strong></h5>
                   <label for="question-4"> Pick a hobby.</label>
                   <br />
-                  <select data-placeholder="" class="chosen-select" id="question-4">
+                  <select data-placeholder="" class="chosen-select" id="question-4" onchange="update(60)">
                     <option value=""></option>
                     <option value="1">Meditating</option>
                     <option value="2">Hockey</option>
@@ -125,7 +124,7 @@
                     <h5><strong>Question 5</strong></h5>
                     <label for="question-5"> What is your biggest weakness?</label>
                     <br />
-                    <select data-placeholder="" class="chosen-select" id="question-5">
+                    <select data-placeholder="" class="chosen-select" id="question-5" onchange="update(75)">
                       <option value=""></option>
                       <option value="1">Sometimes I get too focused on one thing</option>
                       <option value="2">I can be impulsive and hot headed.</option>
@@ -139,7 +138,7 @@
                       <h5><strong>Question 6</strong></h5>
                       <label for="question-6"> Pick a comic book sound</label>
                       <br />
-                      <select data-placeholder="" class="chosen-select" id="question-6">
+                      <select data-placeholder="" class="chosen-select" id="question-6" onchange="update(90)">
                         <option value=""></option>
                         <option value="1">BOOM!</option>
                         <option value="2">POW!</option>
@@ -153,7 +152,7 @@
                         <h5><strong>Question 7</strong></h5>
                         <label for="question-7"> What’s your catchphrase?</label>
                         <br />
-                        <select data-placeholder="" class="chosen-select" id="question-7">
+                        <select data-placeholder="" class="chosen-select" id="question-7" onchange="update(100)">
                           <option value=""></option>
                           <option value="1">Totally tubular dude!</option>
                           <option value="2">I Love Being A Turtle.</option>
@@ -162,6 +161,11 @@
                           <option value="5">Cowabunga</option>
                         </select>
                       </div>
+                      <br />
+            <div class="progress">
+                <div id="myprogressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 2%"></div>
+              </div>
+            <br/> 
               <button type="submit" class="btn btn-info submit" id="submit"><i class="fa fa-check-circle"></i> Submit </button>
               <br />
             </form>
@@ -209,6 +213,13 @@
   <!-- End of Modal Window -->
   
   <script type="text/javascript">
+  //Progress Bar 
+    function update(num) {
+        var element = document.getElementById("myprogressBar");
+            element.style.width = num + '%';
+            element.innerHTML = num + '%';
+      }  
+
     // Chosen CSS
     var config = {
       ".chosen-select": {},
@@ -233,7 +244,7 @@
     // Capture the form inputs
     $("#submit").on("click", function (event) {
       event.preventDefault();
-
+      
       // Form validation
       function validateForm() {
         var isValid = true;

@@ -15,18 +15,18 @@ module.exports = function (app) {
     //Data related 
     var newFriend = req.body;
     var newFriendScores = [];
-    console.log("POst request");
+  
     //Convert the scores
     for (var i = 0; i < newFriend.scores.length; i++) {
       newFriendScores.push(parseInt(newFriend.scores[i]));
     }
     newFriend.scores = newFriendScores;
-    console.log("New Friend" + newFriend);
+    
     //Comparing Variables 
     var perfectMatch = matchNinjaCharacter(newFriend);
     console.log(perfectMatch);
 
-    //Adding the new friend to the list 
+    //Adding the new friend to the list --in this case not reuired for future can be useful 
     // friendList.push(newFriend);
 
     //Sending the match back to the browser 
@@ -37,9 +37,7 @@ module.exports = function (app) {
 function matchNinjaCharacter(newFriend) {
   //Loop through all the TMNT Characters 
 
-  console.log("TMNT COUNT:" + ninjaList.length);
   var newFriendScore = newFriend.scores.reduce((total, num) => total + Number(num), 0);
-  console.log(newFriendScore);
 
   // make var to track closest match
   var closestMatchIndex;
@@ -62,7 +60,7 @@ function matchNinjaCharacter(newFriend) {
     }
   });
 
-  console.log(ninjaList[closestMatchIndex], closestMatchDiff)
+  // console.log(ninjaList[closestMatchIndex], closestMatchDiff);
 
   //Return the Matched Character 
   return ninjaList[closestMatchIndex];

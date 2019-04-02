@@ -30,6 +30,22 @@ h5 {
 label {
    font-size: 22px; 
 }
-.card{
-      
+/* resize Dropdown list width  */
+.chosen-select {
+   width:90%; 
 }
+
+/* Progress Bar */
+#Progress_Status { 
+   width: 50%; 
+   background-color: #ddd; 
+ } 
+   
+ #myprogressBar { 
+   width: 1%; 
+   height: 35px; 
+   background-color: #4CAF50; 
+   text-align: center; 
+   line-height: 32px; 
+   color: black; 
+ } 
