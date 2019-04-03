@@ -16,7 +16,7 @@ module.exports = function (app) {
   });
   // If no match found redirect to home 
   app.get('*', function (req, res) {
-
-    res.sendFile(path.join(__dirname, '../public/survey.html'));
+    
+    res.sendFile(path.join(__dirname, '../public/home.html'));
   });
 }; 
