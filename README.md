@@ -1,6 +1,6 @@
 # Ninja-Character-Finder
 Full stack survey based application using Node.js &amp; Express.
-The App asks the user to enter his detaisl along with it fill a few questions related to their personality traits and match with theeeir new found **_Teenage Mutant Ninja Characters_**. On entering all the values a modal popup will appear that will display the matched Ninja Character based on their answer. 
+The App asks the user to enter his details along with it fill a few questions related to their personality traits and match with it to the **_Teenage Mutant Ninja Characters_**. On entering all the values a modal popup will appear that will display the matched Ninja Character based on their answer. 
 
 ## Deployed Link : 
 <hr /> 
@@ -10,7 +10,7 @@ Access the Heroku Deployed link here <a href="http://findyourninjacharacter.hero
 <hr /> 
 1. Clone the repository 
 
-2. Run this in command line terminal with the folder 
+2. Run this in command line terminal within the folder 
 
     npm install 
 
@@ -19,7 +19,7 @@ based on the **_package.json_** all the dependencies will be installed.
 
     node server.js 
 
-Else can be accessed using the deployed link. 
+Else can be accessed using the deployed heroku link. 
 
 
 ### Built With: 
@@ -42,6 +42,11 @@ Else can be accessed using the deployed link.
 ![Survey Page](https://github.com/NVK2016/Ninja-Character-Finder/blob/master/app/public/assets/misc-Screenshots/Survey-Ninja-Character-Finder.png?raw=true)
 
 ![Modal Popup](https://github.com/NVK2016/Ninja-Character-Finder/blob/master/app/public/assets/misc-Screenshots/Match-Results.png?raw=true)
+
+## Disclaimer - Work in Progress
+<hr/>  
+* * dropdown list doesn't reset on submit button click . 
+* * progress bar calculation need to rectified  
 
 #### Owner: 
 Namita Shenai 

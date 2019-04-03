@@ -32,7 +32,7 @@ label {
 }
 /* resize Dropdown list width  */
 .chosen-select {
-   width:90%; 
+   width:50%; 
 }
 
 /* Progress Bar */
@@ -49,3 +49,7 @@ label {
    line-height: 32px; 
    color: black; 
  } 
+
+ /* Change background for drop down list  */
+ select { -webkit-border-radius:25px; -moz-border-radius:25px; border-radius:25px; } 
+ 
