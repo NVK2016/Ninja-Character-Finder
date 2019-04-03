@@ -58,7 +58,7 @@
             </h4>
           </div>
           <div class="panel-body">
-            <form role="form">
+            <form role="form" id="surveyData">
               <div class="form-group">
                 <label for="name">Name (Required)</label>
                 <input type="text" class="form-control" id="name" placeholder="Name">
@@ -74,7 +74,7 @@
                 <label for="question-1">How would your friends describe you?</label>
                 <br />
                 <select data-placeholder="" class="chosen-select" id="question-1" onchange="update(15)">
-                  <option value=""></option>
+                  <option value="" aria-selected="true"></option>
                   <option value="1">Focused</option>
                   <option value="2">Honest</option>
                   <option value="3">Strategic</option>
@@ -171,7 +171,7 @@
                 <div id="myprogressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 2%"></div>
               </div>
             <br/> 
-              <button type="submit" class="btn btn-info submit" id="submit"><i class="fa fa-check-circle"></i> Submit </button>
+            <button type="submit" class="btn btn-info submit" id="submit"><i class="fa fa-check-circle"></i> Submit </button>
               <br />
             </form>
             <br />
@@ -199,7 +199,7 @@
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button id="closeModalBtn" type="button" class="close" data-dismiss="modal">&times;</button>
             <h2 class="modal-title"><strong>Best Match</strong></h2>
           </div>
           <div class="modal-body">
@@ -209,7 +209,7 @@
             <p id="match-desc"></p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button id="closeModalBtn" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
   
@@ -248,6 +248,10 @@
     for (var selector in config) {
       $(selector).chosen(config[selector]);
     }
+    //CLose MOdal 
+    $('[data-dismiss=modal]').on('click', function (e) {
+      
+    });
 
     // Capture the form inputs
     $("#submit").on("click", function (event) {
@@ -288,12 +292,12 @@
             parseInt($("#question-7").val()),
           ]
         };
+        //Reset ALL FIELDS  
+        $("#name").val(""); 
+        $("#photo").val(""); 
 
         // AJAX post the data to the ninja API.
         $.post("/api/ninjas", newFriendData, function (data) {
-
-          // to test the response from the server
-          // alert(data.name + " | "+ data.photo + " | " + data.desc);
           
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           $("#match-name").text(data.name);

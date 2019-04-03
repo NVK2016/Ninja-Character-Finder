@@ -11,7 +11,7 @@ module.exports = function (app) {
   // API POST Requests
   // Below code handles when a user submits a form and thus submits data to the server.
   app.post('/api/ninjas', function (req, res) {
-
+  
     //Data related 
     var newFriend = req.body;
     var newFriendScores = [];
