@@ -45,8 +45,8 @@ Else can be accessed using the deployed heroku link.
 
 ## Disclaimer - Work in Progress
 <hr/>  
+
 * * dropdown list doesn't reset on submit button click . 
-* * progress bar calculation need to rectified  
 
 #### Owner: 
 Namita Shenai 
