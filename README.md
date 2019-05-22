@@ -43,10 +43,10 @@ Else can be accessed using the deployed heroku link.
 
 ![Modal Popup](https://github.com/NVK2016/Ninja-Character-Finder/blob/master/app/public/assets/misc-Screenshots/Match-Results.png?raw=true)
 
-## Disclaimer - Work in Progress
+##### Disclaimer 
 <hr/>  
 
-* * dropdown list doesn't reset on submit button click . 
+* * dropdown list doesn't reset on submit button click  - Work in progress 
 
 #### Owner: 
 Namita Shenai 
