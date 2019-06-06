@@ -1,5 +1,5 @@
 # Ninja-Character-Finder
-Full stack survey based application using Node.js &amp; Express.
+Front-end survey based application using Node.js &amp; Express.
 The App asks the user to enter his details along with it fill a few questions related to their personality traits and match with it to the **_Teenage Mutant Ninja Characters_**. On entering all the values a modal popup will appear that will display the matched Ninja Character based on their answer. 
 
 ## Deployed Link : 
