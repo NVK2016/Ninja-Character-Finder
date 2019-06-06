@@ -168,7 +168,7 @@
                       </div>
                       <br />
             <div class="progress" style="height: 25px;">
-                <div id="myprogressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 2%"></div>
+                <div id="myprogressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="2" aria-valuemax="100" style="width: 2%"></div>
               </div>
             <br/> 
             <button type="submit" class="btn btn-info submit" id="submit"><i class="fa fa-check-circle"></i> Submit </button>
@@ -264,7 +264,25 @@
     //Reset Button 
     $('#resetForm').on("click", function(){
       // $(".chosen-select").selectpicker('deselectAll'); 
-      $( ".chosen-select option:selected" ).text("");
+       //Reset ALL FIELDS  
+       $("#name").val(""); 
+        $("#photo").val(""); 
+
+        // reset the values of the different dropdown-list menus to the default
+        $('select').chosen('destroy');  
+
+        $('select').prop("selectedIndex", -1);   
+        $('select').chosen();
+        // alert("DDL Name", $('select').chosen());
+
+        //Reset Progress Bar 
+        makeProgress(2); 
+        //Updatee text on progress Bar
+        update(2); 
+    
+        //For reset progress bar with 2
+        $( "#myprogressBar" ).css( "width", "2%" ).attr( "aria-valuenow", 2);
+        $( "#myprogressBar1" ).css( "width", "2%" ).attr( "aria-valuenow", 2);
     });
     // Capture the form inputs
     $("#submit").on("click", function (event) {
@@ -310,9 +328,15 @@
         $("#photo").val(""); 
 
         // reset the values of the different dropdown-list menus to the default
+        $('select').chosen('destroy');  
+
+        $('select').prop("selectedIndex", -1);   
+        $('select').chosen();
+        // alert("DDL Name", $('select').chosen());
 
         //Reset Progress Bar 
-        makeProgress(0); 
+        makeProgress(2); 
+    
         //For reset progress bar with 2
         $( "#myprogressBar" ).css( "width", "2%" ).attr( "aria-valuenow", 2);
         $( "#myprogressBar1" ).css( "width", "2%" ).attr( "aria-valuenow", 2);
